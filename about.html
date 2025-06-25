@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | Holy Ghost Revival Royal Assembly Church</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0a1a3c 60%, #fff 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .about-section {
+            background: rgba(255,255,255,0.85);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(10,26,60,0.2);
+            padding: 2.5rem 2rem;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+        .church-title {
+            color: #0a1a3c;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px #fff8;
+        }
+        .dove {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: 10%;
+            left: -100px;
+            z-index: 10;
+            opacity: 0.85;
+            pointer-events: none;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 1.5rem 1rem;
+            }
+            .dove {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Dove SVG Animation -->
+    <svg class="dove" id="dove" viewBox="0 0 64 64" fill="none">
+        <g>
+            <path d="M32 8 Q36 24 56 24 Q44 32 56 56 Q36 44 32 56 Q28 44 8 56 Q20 32 8 24 Q28 24 32 8Z" fill="#fff" stroke="#0a1a3c" stroke-width="2"/>
+            <circle cx="32" cy="24" r="3" fill="#0a1a3c"/>
+        </g>
+    </svg>
+
+    <div class="container">
+        <div class="about-section mx-auto shadow-lg">
+            <h1 class="church-title text-center mb-4">Holy Ghost Revival Royal Assembly Church</h1>
+            <p class="lead text-center text-dark mb-4">
+                Welcome to the Holy Ghost Revival Royal Assembly Church!<br>
+                We are a vibrant, spirit-filled community dedicated to worship, spiritual growth, and service. Our mission is to spread the love and power of the Holy Spirit, transforming lives and impacting our world for Christ.
+            </p>
+            <hr>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h4 class="text-primary">Our Vision</h4>
+                    <p>
+                        To ignite a global revival through the Holy Spirit, raising disciples who reflect Christ’s love, power, and compassion.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="text-primary">Our Values</h4>
+                    <ul>
+                        <li>Spirit-led Worship</li>
+                        <li>Community & Fellowship</li>
+                        <li>Faith & Prayer</li>
+                        <li>Service & Outreach</li>
+                        <li>Integrity & Love</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="index.html" class="btn btn-primary btn-lg">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP & Dove Animation Script -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        // Animate dove flying across the screen in a wave pattern
+        gsap.to("#dove", {
+            x: window.innerWidth + 200,
+            y: 100,
+            duration: 10,
+            repeat: -1,
+            ease: "power1.inOut",
+            yoyo: true,
+            modifiers: {
+                y: function(y, target) {
+                    // Wave pattern
+                    const progress = gsap.getProperty(target, "x") / window.innerWidth;
+                    return 100 + Math.sin(progress * Math.PI * 2) * 60;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

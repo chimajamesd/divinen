@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Churuuch Donate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #2196f3 0%, #0d47a1 100%);
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .donate-card {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+            backdrop-filter: blur(4px);
+            padding: 2rem;
+        }
+        .donate-btn {
+            background: #1565c0;
+            border: none;
+            transition: background 0.3s;
+        }
+        .donate-btn:hover {
+            background: #1976d2;
+        }
+        .animated-heart {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            animation: beat 1s infinite;
+            display: block;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1);}
+            50% { transform: scale(1.2);}
+        }
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container position-relative" style="z-index:1;">
+        <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+            <div class="col-md-6">
+                <div class="donate-card text-center">
+                    <a href="index.html" class="btn btn-light mb-3" style="position:absolute; left:1rem; top:1rem; z-index:2;">Home</a>
+                    <svg class="animated-heart" viewBox="0 0 32 29.6">
+                        <path fill="#fff" d="M23.6,0c-2.6,0-5,1.3-6.6,3.3C15.4,1.3,13,0,10.4,0C4.7,0,0,4.7,0,10.4c0,7.1,9.2,13.2,15.1,18.7
+                            c0.6,0.5,1.5,0.5,2.1,0C22.8,23.6,32,17.5,32,10.4C32,4.7,27.3,0,23.6,0z"/>
+                    </svg>
+                    <h1 class="mb-3 fw-bold">Support Churuuch</h1>
+                    <p class="mb-4">Your donation helps us continue our mission. Every contribution makes a difference!</p>
+                    <form>
+                        <div class="mb-3">
+                            <input type="number" class="form-control form-control-lg" placeholder="Enter amount (USD)" min="1" required>
+                        </div>
+                        <button type="submit" class="btn donate-btn btn-lg w-100">Donate Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Animated Wave SVG -->
+    <svg class="wave" viewBox="0 0 1440 320"></svg>
+        <path fill="#1976d2" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,229.3C672,235,768,213,864,197.3C960,181,1056,171,1152,186.7C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple animation for form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.querySelector('.donate-btn');sf
+            btn.innerText = 'Thank You!';
+            btn.classList.add('disabled');
+            setTimeout(() => {
+                btn.innerText = 'Donate Now';
+                btn.classList.remove('disabled');
+                this.reset();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>\

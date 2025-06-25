@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holy Ghost Revival Royal Assembly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="/new/about.html">
+     <link rel="stylesheet" href="/new/services.html">
+        <link rel="stylesheet" href="/new/evnt.html">
+        <link rel="stylesheet" href="/new/donate.html">
+    <link rel="stylesheet" href="/new/contact.html">
+    <link rel="stylesheet" href="/new/index.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #0a174e;
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .navbar {
+            background: #001f54;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #fff !important;
+        }
+        .hero {
+            background: #fff;
+            color: #0a174e;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .hero img {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(10,23,78,0.2);
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            color: #fff;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        .footer {
+            background: #001f54;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .btn-primary {
+            background: #0a174e;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: #133b5c;
+        }
+    </style>
+    <!-- Velocity.js -->
+    <script src="https://cdn.jsdelivr.net/npm/velocity-animate@2.0/velocity.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Navbar fade in
+            Velocity(document.querySelector('.navbar'), "transition.slideDownIn", { duration: 800 });
+            // Hero image bounce in
+            Velocity(document.querySelector('.hero img'), "transition.bounceUpIn", { duration: 1000, delay: 200 });
+            // Hero text fade in
+            Velocity(document.querySelector('.hero h1'), "fadeIn", { duration: 800, delay: 600 });
+            Velocity(document.querySelector('.hero p'), "fadeIn", { duration: 800, delay: 800 });
+            // Section titles slide in
+            document.querySelectorAll('.section-title').forEach(function(el, i) {
+                Velocity(el, "transition.slideLeftIn", { duration: 700, delay: 1000 + i * 200 });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Holy Ghost Revival Royal Assembly</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/event.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/donate.html">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/ministries.html">Ministries</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Toast Placement Example -->
+    <div class="container my-4">
+        <form>
+            <div class="mb-3">
+                <label for="selectToastPlacement">Toast placement</label>
+                <select class="form-select mt-2" id="selectToastPlacement">
+                    <option value="" selected>Select a position...</option>
+                    <option value="top-0 start-0">Top left</option>
+                    <option value="top-0 start-50 translate-middle-x">Top center</option>
+                    <option value="top-0 end-0">Top right</option>
+                    <option value="top-50 start-0 translate-middle-y">Middle left</option>
+                    <option value="top-50 start-50 translate-middle">Middle center</option>
+                    <option value="top-50 end-0 translate-middle-y">Middle right</option>
+                    <option value="bottom-0 start-0">Bottom left</option>
+                    <option value="bottom-0 start-50 translate-middle-x">Bottom center</option>
+                    <option value="bottom-0 end-0">Bottom right</option>
+                </select>
+            </div>
+        </form>
+        <div aria-live="polite" aria-atomic="true" class="bg-body-secondary position-relative bd-example-toasts rounded-3">
+            <div class="toast-container p-3" id="toastPlacement">
+                <div class="toast">
+                    <div class="toast-header">
+                        <img src="..." class="rounded me-2" alt="...">
+                        <strong class="me-auto">Bootstrap</strong>
+                        <small>11 mins ago</small>
+                    </div>
+                    <div class="toast-body">
+                        Hello, world! This is a toast message.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&q=80" alt="Church">
+        <h1>Welcome to Holy Ghost Revival Royal Assembly</h1>
+        <p class="lead">A place of worship, revival, and community.</p>
+        <a href="#about" class="btn btn-primary mt-3">Learn More</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>
+                        Holy Ghost Revival Royal Assembly is dedicated to spiritual growth, community service, and the revival of faith. Join us for uplifting worship, inspiring messages, and a welcoming family.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=400&q=80" alt="Congregation" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section bg-light" id="services" style="color:#0a174e;">
+        <div class="container">
+            <h2 class="section-title" style="color:#0a174e;">Our Services</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <h4>Sunday Worship</h4>
+                    <p>Join us every Sunday at 10am for worship and teaching.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Midweek Prayer</h4>
+                    <p>Wednesday prayer meetings at 6pm for spiritual empowerment.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Youth Fellowship</h4>
+                    <p>Friday youth gatherings for fun, learning, and fellowship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            &copy; 2024 Holy Ghost Revival Royal Assembly. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        // GSAP Animations
+        gsap.from(".hero img", {duration: 1, y: -50, opacity: 0, ease: "bounce"});
+        gsap.from(".hero h1", {duration: 1, x: -100, opacity: 0, delay: 0.5});
+        gsap.from(".hero p", {duration: 1, x: 100, opacity: 0, delay: 0.7});
+        gsap.from(".navbar", {duration: 1, y: -100, opacity: 0});
+        gsap.from(".section-title", {
+            scrollTrigger: ".section-title",
+            duration: 1,
+            x: -100,
+            opacity: 0,
+            stagger: 0.3
+        });
+    </script>
+    <script>
+        // Toast placement logic
+        const selectPlacement = document.getElementById('selectToastPlacement');
+        const toastContainer = document.getElementById('toastPlacement');
+        selectPlacement.addEventListener('change', function () {
+            toastContainer.className = 'toast-container p-3'; // reset
+            if (this.value) {
+                toastContainer.classList.add(...this.value.split(' '));
+            }
+        });
+    </script>
+</body>
+</html>

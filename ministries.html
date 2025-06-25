@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holy Ghost Revival Royal Assembly Ministries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #2c5364, #2193b0, #6dd5ed);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem 1rem;
+            background: rgba(0, 51, 102, 0.7);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            position: relative;
+            overflow: hidden;
+        }
+        .motion {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .motion span {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 8s infinite ease-in-out alternate;
+        }
+        .motion .one { width: 100px; height: 100px; background: #2193b0; left: 10%; top: 20%; animation-delay: 0s;}
+        .motion .two { width: 60px; height: 60px; background: #6dd5ed; left: 70%; top: 10%; animation-delay: 2s;}
+        .motion .three { width: 80px; height: 80px; background: #0f2027; left: 50%; top: 60%; animation-delay: 4s;}
+        .motion .four { width: 50px; height: 50px; background: #2c5364; left: 80%; top: 50%; animation-delay: 1s;}
+        @keyframes float {
+            0% { transform: translateY(0) scale(1);}
+            100% { transform: translateY(-30px) scale(1.1);}
+        }
+        .content {
+            max-width: 700px;
+            margin: 2rem auto;
+            background: rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.14);
+            backdrop-filter: blur(2px);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 1rem 0;
+            z-index: 1;
+            position: relative;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: #6dd5ed;
+            margin-top: 2rem;
+            letter-spacing: 1px;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+        @media (max-width: 600px) {
+            .content { padding: 1rem; }
+            h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="z-index:1; position:relative; margin-bottom: 1.5rem;">
+            <ul style="list-style:none; padding:0; margin:0; display:flex; justify-content:center; gap:2rem;">
+            <li><a href="index.html" style="color:#6dd5ed; text-decoration:none; font-weight:bold;">Home</a></li>
+            <li><a href="ministries.html" style="color:#6dd5ed; text-decoration:none; font-weight:bold;">Ministries</a></li>
+            <li><a href="events.html" style="color:#6dd5ed; text-decoration:none; font-weight:bold;">Events</a></li>
+            <li><a href="contact.html" style="color:#6dd5ed; text-decoration:none; font-weight:bold;">Contact</a></li>
+            <li><a href="donate.html" style="color:#6dd5ed; text-decoration:none; font-weight:bold;">Donate</a></li>
+            
+            </ul>
+        </nav>
+        <div class="motion">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+            <span class="four"></span>
+        </div>
+        <h1>Holy Ghost Revival Royal Assembly</h1>
+        <p style="z-index:1; position:relative;">Welcome to a place of worship, transformation, and revival.</p>
+    </header>
+    <div class="content">
+        <h2>Our Ministries</h2>
+        <p>
+            At Holy Ghost Revival Royal Assembly, we are dedicated to spiritual growth, community outreach, and the demonstration of God's power. Join us for uplifting worship, impactful teachings, and life-changing encounters with the Holy Spirit.
+        </p>
+        <h2>Live Services</h2>
+        <p>
+            Experience our services live every Sunday and Wednesday. Stay tuned for updates and live streams right here!
+        </p>
+        <h2>Contact & Location</h2>
+        <p>
+            For more information, reach out to us at <a href="mailto:info@hgrra.org" style="color:#6dd5ed;">info@hgrra.org</a> or visit our assembly.
+        </p>
+    </div>
+</body>
+</html>
